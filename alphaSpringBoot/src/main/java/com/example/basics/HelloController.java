@@ -10,10 +10,8 @@ public class HelloController {
         return "Hello, Spring Boot! You are great as you save a lot of time.";
     }
     @GetMapping("/simpleAddition")
-    public String simpleAdd(){
-        int a =10;
-        int b = 16;
-        int ans = a+b;
+    public String simpleAdd(@PathVariable int num1,@PathVariable int num2){
+        int ans = num1+num2;
         return "The addition of->"+a+" and "+b +" is-> "+ans;
     }
 }
